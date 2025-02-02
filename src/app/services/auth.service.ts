@@ -1,25 +1,22 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { User } from '../interfaces/auth';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
+import { delay } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
+  constructor() { }
 
-  private baseUrl = 'http://localhost:3000';
-
-
-  constructor(private http: HttpClient) { }
-
-  registerUser(userDetails: User) {
-    return this.http.post(`${this.baseUrl}/users`, userDetails);
+  // Mock function to simulate sending a reset email
+  sendResetEmail(email: string): Observable<any> {
+    console.log('Mock sending reset email to:', email);
+    return of({ message: 'Reset link sent to ' + email }).pipe(delay(1000)); // Simulate network delay
   }
 
-  getUserByEmail(email: string): Observable<User[]> {
-    return this.http.get<User[]>(`${this.baseUrl}/users?email=${email}`);
+  // Mock function to simulate resetting the password
+  resetPassword(newPassword: string): Observable<any> {
+    console.log('Mock resetting password to:', newPassword);
+    return of({ message: 'Password has been reset successfully!' }).pipe(delay(1000)); // Simulate network delay
   }
-
-
 }

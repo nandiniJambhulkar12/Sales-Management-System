@@ -1,0 +1,85 @@
+/* src/app/add-user/add-user.component.css */
+
+/* Wrapper for the form */
+.add-user-form {
+    max-width: 900px; /* Increase width of the form */
+    margin: 100px auto;
+    padding: 100px;
+    background-color:whitesmoke;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header style */
+  .add-user-form h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Form elements */
+  .add-user-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Input labels */
+  .add-user-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Input fields and select box */
+  .add-user-form input,
+  .add-user-form select {
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .add-user-form input:focus,
+  .add-user-form select:focus {
+    outline: none;
+    border-color: #4CAF50;
+  }
+  
+  /* Submit button */
+  .add-user-form button {
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-user-form button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Error/Warning for validation */
+  .add-user-form input.ng-invalid.ng-touched,
+  .add-user-form select.ng-invalid.ng-touched {
+    border-color: #e74c3c;
+  }
+  
+  .add-user-form input.ng-valid.ng-touched,
+  .add-user-form select.ng-valid.ng-touched {
+    border-color: #2ecc71;
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .add-user-form {
+      width: 90%; /* Make the form take up 90% of the screen width on smaller screens */
+    }
+  }
+  

@@ -1,0 +1,54 @@
+.user-details-container {
+    max-width: 800px; /* Increased the max-width */
+    width: 200%; /* Ensure the container fills its parent */
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.save-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.save-btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.user-actions {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.user-details-link {
+    font-size: 16px;
+    color: #007bff;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.user-details-link:hover {
+    color: #0056b3; /* Darker shade on hover */
+}

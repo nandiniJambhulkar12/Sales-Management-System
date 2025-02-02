@@ -1,0 +1,18 @@
+<div class="add-user-form">
+    <h2>Add New User</h2>
+    <form (ngSubmit)="addUser()">
+      <label for="name">Name:</label>
+      <input type="text" id="name" [(ngModel)]="newUser.name" name="name" required />
+      <label for="email">Email:</label>
+      <input type="email" id="email" [(ngModel)]="newUser.email" name="email" required />
+      <label for="role">Role:</label>
+      <select id="role" [(ngModel)]="newUser.role" name="role" required>
+        <option value="Admin">Admin</option>
+        <option value="User">User</option>
+      </select>
+      <button type="submit">Save User</button>
+      
+
+    </form>
+  </div>
+  

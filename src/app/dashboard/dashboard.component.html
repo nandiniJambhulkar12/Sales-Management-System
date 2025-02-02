@@ -1,0 +1,60 @@
+<div class="dashboard-container">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo">Logo</div>
+    <ul class="menu">
+      <li><a href="#" class="menu-item"><i class="icon"></i> Dashboard</a></li>
+      <!-- <li><a href="#" class="menu-item"><i class="icon"></i> Manage User</a></li> -->
+      <li><a routerLink="/manage-users" class="menu-item"><i class="icon"></i> Manage User</a></li>
+    </ul>
+    <div class="logout">
+      <!-- Update the logout link to trigger the logout method -->
+      <a href="#" class="menu-item" (click)="logout()"><i class="icon"></i> Logout</a>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <header class="header">
+      <div class="user-details">
+        <span>Gene Russell</span>
+        <span>Developer</span>
+      </div>
+      <div class="user-actions">
+        <span class="user-details-link" [routerLink]="['/user-details']">User Details</span>
+      </div>
+    </header>
+
+    <section class="content">
+      <h1>Products</h1>
+      <div class="table-container">
+        <table class="dashboard-table">
+          <thead>
+            <tr>
+              <th>Products</th>
+              <th>License</th>
+              <th>Support Agent</th>
+              <th>Technology</th>
+              <th>Tickets</th>
+              <th>Sales</th>
+              <th>Earnings</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let product of products">
+              <td>{{ product.name }}</td>
+              <td>{{ product.license }}</td>
+              <td>{{ product.agent }}</td>
+              <td>
+                <span class="badge" [ngClass]="product.badgeClass">{{ product.technology }}</span>
+              </td>
+              <td>{{ product.tickets }}</td>
+              <td>{{ product.sales }}</td>
+              <td>{{ product.earnings }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+</div>

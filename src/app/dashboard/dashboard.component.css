@@ -1,0 +1,263 @@
+/* General styles */
+body {
+  margin: 0;
+  font-family: 'Roboto', Arial, sans-serif;
+  background-color: #f4f7fc;
+  color: #333;
+}
+
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+}
+.sidebar {
+  background-color: #ffffff;
+  width: 260px;
+  padding: 20px;
+  border-right: 1px solid #e0e0e0; /* Change border-left to border-right */
+  display: flex;
+  flex-direction: column;
+  position: absolute; /* Ensures the sidebar can be placed exactly where needed */
+  left: 0; /* Move the sidebar to the left edge of the page */
+  top: 0; /* Align the sidebar to the top */
+  height: 100%; /* Make the sidebar span the full height of the viewport */
+}
+
+
+.sidebar .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.sidebar .menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar .menu-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #666;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.sidebar .menu-item:hover {
+  background-color: #f0f0f0;
+  color: #d9534f;
+  font-weight: bold;
+}
+
+.sidebar .menu-item i {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.sidebar .logout {
+  margin-top: auto;
+  text-align: center;
+  padding: 15px 0;
+}
+
+.sidebar .logout a {
+  color: #d9534f;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.sidebar .logout a:hover {
+  text-decoration: underline;
+}
+
+/* Main Content */
+.main-content {
+  margin-left: 240px; /* Adjust for the sidebar width */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-right: -20px; /* Extend rightward beyond the parent */
+  padding-left: 30px; /* Increase space on the left */
+  padding-right: 30px; /* Increase space on the right */
+}
+
+.header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  padding: 20px 50px; /* Increase padding for left and right */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px; /* Add gap between flex children */
+}
+
+.header .user-details {
+  font-size: 16px;
+  color: #333;
+  margin-left: auto;
+}
+
+.header .user-details span {
+  font-size: 14px;
+  color: #666;
+}
+
+.header .user-actions {
+  margin-left: auto; /* Push the user actions to the right */
+}
+
+.header .user-actions .user-details-link {
+  color: #d9534f;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.header .user-actions .user-details-link:hover {
+  text-decoration: underline;
+}
+
+/* Table styles */
+.content {
+  padding: 40px; /* Increase padding to expand content space */
+  margin-left: -400px; /* Extend the content to the left */
+  margin-right: -400px; /* Extend the content to the right */
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better appearance */
+  border-radius: 8px; /* Optional: Add rounded corners */
+}
+
+
+/* .table-container {
+  margin-top: 20px;
+  margin-left: -20px; 
+  margin-right: -20px; 
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: calc(100% + 40px); 
+}
+
+.dashboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  text-align: left;
+} */
+
+.table-container {
+  margin: 20px -20px; /* Add negative margins to extend left and right */
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: calc(100% + 40px); /* Increase the table container width */
+}
+
+.dashboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  text-align: left;
+}
+
+
+.dashboard-table th,
+.dashboard-table td {
+  border: 1px solid #e0e0e0;
+  padding: 14px 16px;
+  font-size: 14px;
+}
+
+.dashboard-table th {
+  background-color: #f8f9fc;
+  color: #333;
+  font-weight: bold;
+}
+
+.dashboard-table td {
+  color: #666;
+}
+
+.dashboard-table tr:nth-child(even) {
+  background-color: #f9fafc;
+}
+
+.product-icon {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #ddd;
+  color: #fff;
+  font-size: 14px;
+  line-height: 36px;
+  text-align: center;
+  margin-right: 12px;
+  font-weight: bold;
+}
+
+/* Badge styles */
+.badge {
+  padding: 5px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  color: #fff;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.badge.angular {
+  background-color: #dd0031;
+}
+
+.badge.vuejs {
+  background-color: #42b883;
+}
+
+.badge.bootstrap {
+  background-color: #563d7c;
+}
+
+.badge.react {
+  background-color: #61dafb;
+}
+
+/* Buttons and actions */
+button.action-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button.action-btn:hover {
+  opacity: 0.9;
+}
+
+button.export-btn {
+  background-color: #5cb85c;
+  color: #fff;
+}
+
+button.refresh-btn {
+  background-color: #0275d8;
+  color: #fff;
+}
+
+button.logout-btn {
+  background-color: #d9534f;
+  color: #fff;
+}
